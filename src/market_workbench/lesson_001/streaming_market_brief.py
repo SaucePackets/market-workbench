@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import asyncio
 from agents import Runner
 
-from lesson_001.agent import market_brief_agent, market_brief_prompt
+from market_workbench.lesson_001.agent import market_brief_agent, market_brief_prompt
 
 load_dotenv()
 
