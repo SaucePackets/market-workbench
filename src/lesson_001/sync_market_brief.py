@@ -1,10 +1,14 @@
+from dotenv import load_dotenv
 from agents import Runner
-from agent import market_brief_agent
+
+from lesson_001.agent import market_brief_agent, market_brief_prompt
+
+load_dotenv()
 
 def main():
     result = Runner.run_sync(
         starting_agent=market_brief_agent,
-        input=str(market_brief_agent.instructions)
+        input=market_brief_prompt
     )
 
     print(result.final_output)
