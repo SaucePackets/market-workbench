@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sovereign-markets-mcp"
+version = "0.1.0"
+description = "Learning-first MCP project for market, portfolio, and future approval-gated trading tools."
+requires-python = ">=3.11"
+dependencies = [
+  "openai-agents>=0.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+mcp = ["mcp>=1.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
