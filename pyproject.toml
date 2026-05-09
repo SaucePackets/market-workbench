@@ -3,12 +3,12 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sovereign-markets-mcp"
+name = "market-workbench"
 version = "0.1.0"
 description = "Learning-first MCP project for market, portfolio, and future approval-gated trading tools."
 requires-python = ">=3.11"
 dependencies = [
-  "openai-agents>=0.0.0",
+  "openai-agents",
 ]
 
 [project.optional-dependencies]

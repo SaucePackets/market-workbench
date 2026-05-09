@@ -17,7 +17,7 @@ It should:
 
 ## Your implementation task
 
-Create three scripts under `src/sovereign_markets_mcp/lesson_001/`:
+Create three scripts under `src/market_workbench/lesson_001/`:
 
 - `sync_market_brief.py`
 - `async_market_brief.py`

@@ -1,4 +1,4 @@
-# Sovereign Markets MCP
+# MarketWorkbench
 
 Learning-first project for building portable market, portfolio, and future trading tools through MCP.
 
