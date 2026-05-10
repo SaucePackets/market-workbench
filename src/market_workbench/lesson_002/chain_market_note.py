@@ -12,14 +12,18 @@ async def main():
         input="Give me a cautious first-pass brief on MU.",
     )
 
+    print(brief_result.input)
     print(brief_result.final_output)
+    print(brief_result.last_agent.name)
 
     portfolio_note_result = await Runner.run(
-        starting_agent=market_brief_agent,
+        starting_agent=portfolio_note_agent,
         input=brief_result.to_input_list() + [ {"role": "user", "content": "Write a portflio journal note from this brief" } ]
     )
 
+    print(portfolio_note_result.input)
     print(portfolio_note_result.final_output)
+    print(portfolio_note_result.last_agent.name)
 
 if __name__ == "__main__":
     asyncio.run(main())
