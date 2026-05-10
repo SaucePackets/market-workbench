@@ -15,15 +15,16 @@ async def main():
     print(brief_result.input)
     print(brief_result.final_output)
     print(brief_result.last_agent.name)
+    print(len(brief_result.new_items))
 
     portfolio_note_result = await Runner.run(
         starting_agent=portfolio_note_agent,
-        input=brief_result.to_input_list() + [ {"role": "user", "content": "Write a portflio journal note from this brief" } ]
+        input=brief_result.to_input_list() + [ {"role": "user", "content": "Write a portfolio journal note from this brief" } ]
     )
 
-    print(portfolio_note_result.input)
     print(portfolio_note_result.final_output)
     print(portfolio_note_result.last_agent.name)
+    print(len(brief_result.new_items))
 
 if __name__ == "__main__":
     asyncio.run(main())
