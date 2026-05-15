@@ -1,3 +1,4 @@
+import asyncio
 import json
 from agents import Runner
 from dotenv import load_dotenv
@@ -27,7 +28,7 @@ async def main():
 
     conversation_history = result.to_input_list()
 
-    third_message = "Is NVDA a good investment"
+    third_message = "Is their PE ratio vs the sector"
     conversation_history.append({"role": "user", "content": third_message})
     result = await Runner.run(
         starting_agent=market_agent,
@@ -40,4 +41,5 @@ async def main():
 
 
     
-
+if __name__ == "__main__":
+    asyncio.run(main())
